@@ -43,7 +43,7 @@
 
 @media screen 
     and (min-device-width: 414px)
-    and (max-device-width: 736px)
+    and (max-device-width: 896px)
     and (-webkit-min-device-pixel-ratio: 3) {
     .square {
         height: 300px;
