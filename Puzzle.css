@@ -22,19 +22,6 @@
 .app {
     display: inline-block;
 }
-.partSquare{
-    width:200px;
-    height:200px;
-    overflow:hidden;
-    position: relative;
-    border: 1px solid black;
-}
-
-.image {
-    position: absolute;
-    top: -100px;
-    left: -100px;
-}
 
 .grid-container {
     height: 600px;
@@ -52,4 +39,52 @@
     font-size: 30px;
     text-align: center;
   }
-  
+
+
+@media screen 
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+    .square {
+        height: 300px;
+        width: 300px;
+    }
+    .t0{
+        transform: rotate(0deg);
+    }
+    .t1{
+        transform: rotate(90deg);
+    }
+    .t2{
+        transform: rotate(180deg);
+    }
+    .t3{
+        transform: rotate(270deg);
+    }
+    
+    .app-container {
+        text-align: center;
+    }
+    
+    .app {
+        display: inline-block;
+    }
+    
+    .grid-container {
+        height: 900px;
+        width: 600px;
+        display: grid;
+        grid-template-columns: auto auto ;
+        background-color: grey;
+        padding: 0px;
+      }
+    
+    .pxgrid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 0px;
+        font-size: 30px;
+        text-align: center;
+      }
+    
+}
