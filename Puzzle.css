@@ -23,6 +23,11 @@
     display: inline-block;
 }
 
+.image-container {
+    height: 600px;
+    width: 400px;
+}
+
 .grid-container {
     height: 600px;
     width: 400px;
@@ -42,34 +47,17 @@
 
 
 @media screen 
-    and (min-device-width: 375px)
-    and (max-device-width: 812px)
+    and (min-device-width: 414px)
+    and (max-device-width: 896px)
     and (-webkit-min-device-pixel-ratio: 2) {
     .square {
         height: 300px;
         width: 300px;
     }
-    .t0{
-        transform: rotate(0deg);
+    .image-container {
+        height: 900px;
+        width: 600px;
     }
-    .t1{
-        transform: rotate(90deg);
-    }
-    .t2{
-        transform: rotate(180deg);
-    }
-    .t3{
-        transform: rotate(270deg);
-    }
-    
-    .app-container {
-        text-align: center;
-    }
-    
-    .app {
-        display: inline-block;
-    }
-    
     .grid-container {
         height: 900px;
         width: 600px;
