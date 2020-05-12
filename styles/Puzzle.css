@@ -26,6 +26,21 @@
     width: 50px;
     background-image: url('home.png');
     background-size: 50px 50px;
+    animation: slide 250ms linear 1;
+}
+
+@keyframes slide {
+    from {
+        top: 10px;
+        left: 100px;
+        opacity: 0%;
+    }
+
+    to {
+        top: 10px;
+        left: 10px;
+        opacity: 100%;
+    }
 }
 
 .grid-container {
@@ -74,7 +89,23 @@
         width: 75px;
         background-image: url('../images/home.png');
         background-size: 75px 75px;
+        animation: slide 250ms linear 1;
     }    
+
+    @keyframes slide {
+        from {
+            top: 5px;
+            left: 150px;
+            opacity: 0%;
+        }
+
+        to {
+            top: 5px;
+            left: 5px;
+            opacity: 100%;
+        }
+    }
+
     .puzzle {
         width:400px;
         height:400px;
