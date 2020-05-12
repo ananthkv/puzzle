@@ -1,0 +1,106 @@
+.t0 { transform: rotate(0deg); }
+.t1 { transform: rotate(90deg); }
+.t2 { transform: rotate(180deg); }
+.t3 { transform: rotate(270deg); }
+
+.app-container {
+    text-align: center;
+    background-color: #262626;
+}
+
+.app { display: inline-block; }
+
+.image-container {
+    height: 750px;
+    width: 500px;
+}
+
+.show { display: block; }
+.no-show { display: none; }
+
+.home-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    width: 50px;
+    background-image: url('home.png');
+    background-size: 50px 50px;
+}
+
+.grid-container {
+    height: 750px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: auto;
+    background-color: grey;
+    padding: 0px;
+}
+
+.puzzle-container {
+    height: 750px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: grey;
+    padding: 0px;
+}
+
+.puzzle {
+    width:250px;
+    height:250px;
+    background-size: 500px 750px;
+    background-repeat: no-repeat;
+    float: left;
+ }
+
+ .piece1 { background-position: top left; }
+ .piece2 { background-position: top right; }
+ .piece3 { background-position: center left; }
+ .piece4 { background-position: center right; }
+ .piece5 { background-position: bottom left; }
+ .piece6 { background-position: bottom right; }
+
+
+ @media screen 
+    and (min-device-width: 300px)
+    and (max-device-width: 896px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    .home-icon {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        height: 75px;
+        width: 75px;
+        background-image: url('../images/home.png');
+        background-size: 75px 75px;
+    }    
+    .puzzle {
+        width:400px;
+        height:400px;
+        background-size: 800px 1200px;
+        background-repeat: no-repeat;
+        float: left;
+    }
+    .image-container {
+        height: 1200px;
+        width: 800px;
+    }
+    .grid-container {
+        height: 1200px;
+        width: 800px;
+        display: grid;
+        grid-template-columns: auto ;
+        background-color: grey;
+        padding: 0px;
+      }
+      .puzzle-container {
+        height: 1200px;
+        width: 800px;
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: grey;
+        padding: 0px;
+    }
+}
+ 
