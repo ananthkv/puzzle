@@ -60,5 +60,7 @@ function validate(obj) {
 }
 
 function fireworks(str) {
-    console.log(str);
+    console.log(str);//star-icon
+    const starIcon = document.getElementById('star-icon');
+    starIcon.style.display = 'block';
 }

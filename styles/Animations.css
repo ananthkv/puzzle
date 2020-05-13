@@ -1,0 +1,28 @@
+.star {
+    position: absolute;
+    top: 20vh;
+    left: calc(50vw - 250px);
+    width: 500px;
+    height: 500px;
+    opacity: 100%;
+    background-image: url('../images/star.png');
+    background-size: 500px 500px;
+    animation: star-appear 500ms linear 1;
+    z-index: 1;
+}
+@keyframes star-appear {
+    from {
+        top: 100vh;
+        left: calc(50vw - 250px);
+        width: 10px;
+        height: 10px;
+        opacity: 10%;
+    }
+    to {
+        top: 20vh;
+        left: calc(50vw - 250px);
+        width: 500px;
+        height: 500px;
+        opacity: 100%;
+    }
+}
