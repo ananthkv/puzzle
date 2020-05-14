@@ -63,4 +63,10 @@ function fireworks(str) {
     console.log(str);//star-icon
     const starIcon = document.getElementById('star-icon');
     starIcon.style.display = 'block';
+    playSoundEffect();
+}
+
+function playSoundEffect() {
+    const yeah = document.getElementById('yeah');
+    yeah.play();
 }
