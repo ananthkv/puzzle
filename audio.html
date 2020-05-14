@@ -4,14 +4,19 @@
         <link rel="stylesheet" href="styles/Puzzle.css">
         <link rel="stylesheet" href="styles/Animals.css">
         <link rel="stylesheet" href="styles/Animations.css">
-        <script type="text/javascript" src="scripts/Puzzle.js"></script>
+        <script type="text/javascript">
+            function playSoundEffect() {
+                const yeah = document.getElementById('yeah');
+                yeah.play();
+            }
+        </script>
     </head>
     <body class="app-container">
         <a href="index.html"><div id="home-icon" class="home-icon"></div></a>
         <div class="app-container">
             <div class="app">
-                <div id="star-icon" class="star">
-                    <audio autoplay preload="auto">
+                <div id="star-icon" class="star" onclick="javascript: playSoundEffect();">
+                    <audio id="yeah" autoplay preload="auto">
                         <source src="sounds/Yeah.mp3" class="winsound">
                     </audio>
                 </div>
