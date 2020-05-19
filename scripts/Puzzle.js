@@ -1,3 +1,26 @@
+var namesList = [
+    "cat",
+    "chick",
+    "cow",
+    "dog",
+    "duck",
+    "wolf"
+];
+function generateGridContainer(srcId){
+    src = document.getElementById(srcId)
+    for(i in namesList) {
+        const name = namesList[i];
+        const anchorTemplate = document.createElement('a', {"onclick": "javascript:generatePuzzleContainer('"+name+"', this);", "href": "#"});
+        anchorTemplate.setAttribute("onclick", "javascript:generatePuzzleContainer('"+name+"', this);");
+        anchorTemplate.href = "#";
+        const imgTemplate = document.createElement('img', {"src": "images/"+name+".png", "class": "image-container"});
+        imgTemplate.src = "images/"+name+".png";
+        imgTemplate.classList.add("image-container");
+        anchorTemplate.appendChild(imgTemplate.cloneNode(true));
+        src.appendChild(anchorTemplate.cloneNode(true));    
+    };
+}
+
 function generatePuzzleContainer(name, src){
     src.parentElement.style.display = 'none';
     const puzzleContainer = document.getElementById('puzzle-container');

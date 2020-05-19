@@ -6,29 +6,11 @@
         <link rel="stylesheet" href="styles/Animations.css">
         <script type="text/javascript" src="scripts/Puzzle.js"></script>
     </head>
-    <body class="app-container">
+    <body class="app-container" onload="javascript:generateGridContainer('grid-container');">
         <a href="index.html"><div id="home-icon" class="home-icon no-show"></div></a>
         <div class="app-container">
             <div class="app">
-                <div class="grid-container">
-                    <a href="#" onclick="javascript:generatePuzzleContainer('cat', this);">
-                        <img src="images/cat.png" class="image-container"/>
-                    </a>
-                    <a href="#" onclick="javascript:generatePuzzleContainer('chick', this);">
-                        <img src="images/chick.png" class="image-container"/>
-                    </a>
-                    <a href="#" onclick="javascript:generatePuzzleContainer('cow', this);">
-                        <img src="images/cow.png" class="image-container"/>
-                    </a>
-                    <a href="#" onclick="javascript:generatePuzzleContainer('dog', this);">
-                        <img src="images/dog.png" class="image-container"/>
-                    </a>
-                    <a href="#" onclick="javascript:generatePuzzleContainer('duck', this);">
-                        <img src="images/duck.png" class="image-container"/>
-                    </a>
-                    <a href="#" onclick="javascript:generatePuzzleContainer('wolf', this);">
-                        <img src="images/wolf.png" class="image-container"/>
-                    </a>
+                <div class="grid-container" id="grid-container">
                 </div>
                 <div id="puzzle-container" class="puzzle-container no-show"></div>
                 <div id="star-icon" class="star no-show">
