@@ -7,6 +7,11 @@
         <script type="text/javascript">
             function playSoundEffect(audioId) {
                 const audio = document.getElementById(audioId);
+                audio.currentTime = 0;
+                audio.play();
+            }
+            function playSoundEffectFast(audioId) {
+                const audio = document.getElementById(audioId);
                 audio.playbackRate = 4;
                 audio.currentTime = 0;
                 audio.play();
@@ -45,7 +50,7 @@
                         <source src="sounds/Pop.mp3" class="winsound">
                     </audio>
                 </div>
-                <div id="crumble-icon" class="" onclick="javascript: playSoundEffect('crumble-audio');">
+                <div id="crumble-icon" class="" onclick="javascript: playSoundEffectFast('crumble-audio');">
                     CRUMBLE
                     <audio id="crumble-audio" preload="auto">
                         <source src="sounds/Crumble.mp3" class="winsound">
