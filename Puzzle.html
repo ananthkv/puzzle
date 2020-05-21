@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="styles/Puzzle.css">
         <link rel="stylesheet" href="styles/Animals.css">
         <link rel="stylesheet" href="styles/Animations.css">
+        <script type="text/javascript" src="scripts/Animals.js"></script>
         <script type="text/javascript" src="scripts/Puzzle.js"></script>
     </head>
     <body class="app-container" onload="javascript:generateGridContainer('grid-container');">
@@ -13,8 +14,19 @@
                 <div class="grid-container" id="grid-container">
                 </div>
                 <div id="puzzle-container" class="puzzle-container no-show"></div>
+                <div class="no-show">
+                    <audio id="click-audio" preload="auto">
+                        <source src="sounds/Click.mp3" class="winsound">
+                    </audio>
+                    <audio id="pop-audio" preload="auto">
+                        <source src="sounds/Pop.mp3" class="winsound">
+                    </audio>
+                    <audio id="crumble-audio" preload="auto">
+                        <source src="sounds/Crumble.mp3" class="winsound">
+                    </audio>
+                </div>
                 <div id="star-icon" class="star no-show">
-                    <audio id="yeah" autoplay preload="auto">
+                    <audio id="yeah-audio" autoplay preload="auto">
                         <source src="sounds/Yeah.mp3" class="winsound">
                     </audio>
                 </div>

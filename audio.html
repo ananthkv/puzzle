@@ -5,21 +5,53 @@
         <link rel="stylesheet" href="styles/Animals.css">
         <link rel="stylesheet" href="styles/Animations.css">
         <script type="text/javascript">
-            function playSoundEffect() {
-                const yeah = document.getElementById('yeah');
-                yeah.play();
+            function playSoundEffect(audioId) {
+                const audio = document.getElementById(audioId);
+                audio.playbackRate = 4;
+                audio.currentTime = 0;
+                audio.play();
             }
         </script>
+        <style>
+            .app div {
+                width: 100px;
+                height: 100px;
+                border: 1px solid white;
+                background-color: grey;
+                align-items: center;
+                margin: 50px;
+            }
+        </style>
     </head>
     <body class="app-container">
         <a href="index.html"><div id="home-icon" class="home-icon"></div></a>
         <div class="app-container">
             <div class="app">
-                <div id="star-icon" class="star" onclick="javascript: playSoundEffect();">
-                    <audio id="yeah" autoplay preload="auto">
+                <div id="yeah-icon" class="" onclick="javascript: playSoundEffect('yeah-audio');">
+                    YEAH
+                    <audio id="yeah-audio" autoplay preload="auto">
                         <source src="sounds/Yeah.mp3" class="winsound">
                     </audio>
                 </div>
+                <div id="click-icon" class="" onclick="javascript: playSoundEffect('click-audio');">
+                    CLICK
+                    <audio id="click-audio" preload="auto">
+                        <source src="sounds/Click.mp3" class="winsound">
+                    </audio>
+                </div>
+                <div id="pop-icon" class="" onclick="javascript: playSoundEffect('pop-audio');">
+                    POP
+                    <audio id="pop-audio" preload="auto">
+                        <source src="sounds/Pop.mp3" class="winsound">
+                    </audio>
+                </div>
+                <div id="crumble-icon" class="" onclick="javascript: playSoundEffect('crumble-audio');">
+                    CRUMBLE
+                    <audio id="crumble-audio" preload="auto">
+                        <source src="sounds/Crumble.mp3" class="winsound">
+                    </audio>
+                </div>
+            </div>
         </div>
     </body>
 </html>Y

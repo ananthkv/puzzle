@@ -1,11 +1,3 @@
-var namesList = [
-    "cat",
-    "chick",
-    "cow",
-    "dog",
-    "duck",
-    "wolf"
-];
 function generateGridContainer(srcId){
     src = document.getElementById(srcId)
     for(i in namesList) {
@@ -22,6 +14,7 @@ function generateGridContainer(srcId){
 }
 
 function generatePuzzleContainer(name, src){
+    playSoundEffectFast('crumble-audio');
     src.parentElement.style.display = 'none';
     const puzzleContainer = document.getElementById('puzzle-container');
     const homeIcon = document.getElementById('home-icon');
@@ -46,7 +39,7 @@ function play(obj) {
     const winner = validate(obj);
     if(winner === true){
         setTimeout(() => {
-            fireworks("Winner 1");
+            fireworks("You Win!");
         }, 10);
     }
 }
@@ -63,9 +56,9 @@ function rotate(obj) {
     let n;
     switch(t) {
         case 't0': n = "t0"; break;
-        case 't1': n = "t2"; break;
-        case 't2': n = "t3"; break;
-        case 't3': n = "t0"; break;
+        case 't1': n = "t2"; playSoundEffect('pop-audio');break;
+        case 't2': n = "t3"; playSoundEffect('pop-audio');break;
+        case 't3': n = "t0"; playSoundEffect('click-audio');break;
         default: n = "t0";
     }
     obj.classList.remove(t);
@@ -83,13 +76,27 @@ function validate(obj) {
 }
 
 function fireworks(str) {
-    console.log(str);//star-icon
+    console.log(str);
     const starIcon = document.getElementById('star-icon');
     starIcon.style.display = 'block';
-    playSoundEffect();
+    playSoundEffect('yeah-audio');
 }
 
-function playSoundEffect() {
-    const yeah = document.getElementById('yeah');
-    yeah.play();
+function playSoundEffect(audioId, speed) {
+    const audio = document.getElementById(audioId);
+    audio.currentTime = 0;
+    if(speed) { 
+        audio.playbackRate = speed;
+    }
+    audio.play();
+    if(speed) { 
+        audio.playbackRate = 1;
+    }
+}
+
+function playSoundEffectFast(audioId) {
+    const audio = document.getElementById(audioId);
+    audio.playbackRate = 4;
+    audio.currentTime = 0;
+    audio.play();
 }
