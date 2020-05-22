@@ -56,9 +56,9 @@ function rotate(obj) {
     let n;
     switch(t) {
         case 't0': n = "t0"; break;
-        case 't1': n = "t2"; playSoundEffect('pop-audio');break;
-        case 't2': n = "t3"; playSoundEffect('pop-audio');break;
-        case 't3': n = "t0"; playSoundEffect('click-audio');break;
+        case 't1': n = "t2"; playSoundEffect('turn-audio');break;
+        case 't2': n = "t3"; playSoundEffect('turn-audio');break;
+        case 't3': n = "t0"; playSoundEffect('snap-audio');break;
         default: n = "t0";
     }
     obj.classList.remove(t);
